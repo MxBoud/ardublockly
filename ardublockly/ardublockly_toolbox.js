@@ -20,6 +20,9 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="logic_boolean"></block>' +
 '    <block type="logic_null"></block>' +
 '    <block type="logic_ternary"></block>' +
+'    <block type="3dPrinterStepper"></block>'+
+'    <block type="sonar_config"></block>'+
+'    <block type="sonar_read"></block>'+
 '  </category>' +
 '  <sep></sep>' +
 '  <category id="catLoops" name="Loops">' +

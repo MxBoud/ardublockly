@@ -13,7 +13,7 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.stepper');
+goog.provide('Blockly.Blocks.stepperWDriver');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
@@ -22,7 +22,7 @@ goog.require('Blockly.Types');
 /** Common HSV hue for all blocks in this category. */
 Blockly.Blocks.stepper.HUE = 80;
 
-Blockly.Blocks['stepper_config'] = {
+Blockly.Blocks['stepper_config2'] = {
   /**
    * Block for for the stepper generator configuration including creating
    * an object instance and setting up the speed. Info in the setHelpUrl link.
@@ -46,7 +46,7 @@ Blockly.Blocks['stepper_config'] = {
             Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN1')
         .appendField(Blockly.Msg.ARD_STEPPER_PIN2)
         .appendField(new Blockly.FieldDropdown(
-            Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN3');
+            Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN2');
     this.appendValueInput('STEPPER_STEPS')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -65,11 +65,11 @@ Blockly.Blocks['stepper_config'] = {
     Blockly.Boards.refreshBlockFieldDropdown(
         this, 'STEPPER_PIN1', 'digitalPins');
     Blockly.Boards.refreshBlockFieldDropdown(
-        this, 'STEPPER_PIN3', 'digitalPins');
+        this, 'STEPPER_PIN2', 'digitalPins');
   }
 };
 
-Blockly.Blocks['stepper_step'] = {
+Blockly.Blocks['stepper_step2'] = {
   /**
    * Block for for the stepper 'step()' function.
    * @this Blockly.Block

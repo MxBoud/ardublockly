@@ -13,16 +13,16 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.stepper');
+goog.provide('Blockly.Blocks.3dPrinterStepper');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Types');
 
 
 /** Common HSV hue for all blocks in this category. */
-Blockly.Blocks.stepper.HUE = 80;
+Blockly.Blocks.stepper.HUE = 70;
 
-Blockly.Blocks['stepper_config'] = {
+Blockly.Blocks['3dPrinterStepper'] = {
   /**
    * Block for for the stepper generator configuration including creating
    * an object instance and setting up the speed. Info in the setHelpUrl link.
@@ -32,7 +32,7 @@ Blockly.Blocks['stepper_config'] = {
     this.setHelpUrl('http://arduino.cc/en/Reference/StepperConstructor');
     this.setColour(Blockly.Blocks.stepper.HUE);
     this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_STEPPER_SETUP)
+        .appendField("3d printer stepper motor")
         .appendField(
             new Blockly.FieldInstance('Stepper',
                                       Blockly.Msg.ARD_STEPPER_DEFAULT_NAME,
@@ -41,12 +41,12 @@ Blockly.Blocks['stepper_config'] = {
         .appendField(Blockly.Msg.ARD_STEPPER_MOTOR);
     this.appendDummyInput()
         .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField(Blockly.Msg.ARD_STEPPER_PIN1)
+        .appendField("StepPin")
         .appendField(new Blockly.FieldDropdown(
-            Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN1')
-        .appendField(Blockly.Msg.ARD_STEPPER_PIN2)
+            Blockly.Arduino.Boards.selected.digitalPins), 'StepPin')
+        .appendField("DirPin")
         .appendField(new Blockly.FieldDropdown(
-            Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN3');
+            Blockly.Arduino.Boards.selected.digitalPins), 'DirPin');
     this.appendValueInput('STEPPER_STEPS')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -61,54 +61,13 @@ Blockly.Blocks['stepper_config'] = {
    * Updates the content of the the pin related fields.
    * @this Blockly.Block
    */
+
+
   updateFields: function() {
     Blockly.Boards.refreshBlockFieldDropdown(
-        this, 'STEPPER_PIN1', 'digitalPins');
+        this, 'StepPin', 'DirPin');
     Blockly.Boards.refreshBlockFieldDropdown(
-        this, 'STEPPER_PIN3', 'digitalPins');
+        this, 'StepPin', 'DirPin');
   }
-};
 
-Blockly.Blocks['stepper_step'] = {
-  /**
-   * Block for for the stepper 'step()' function.
-   * @this Blockly.Block
-   */
-  init: function() {
-    this.setHelpUrl('http://arduino.cc/en/Reference/StepperStep');
-    this.setColour(Blockly.Blocks.stepper.HUE);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_STEPPER_STEP)
-        .appendField(
-            new Blockly.FieldInstance('Stepper',
-                                      Blockly.Msg.ARD_STEPPER_DEFAULT_NAME,
-                                      false, true, false),
-            'STEPPER_NAME');
-    this.appendValueInput('STEPPER_STEPS')
-        .setCheck(Blockly.Types.NUMBER.checkList);
-    this.appendDummyInput()
-        .appendField(Blockly.Msg.ARD_STEPPER_STEPS);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setTooltip(Blockly.Msg.ARD_STEPPER_STEP_TIP);
-  },
-  /**
-   * Called whenever anything on the workspace changes.
-   * It checks/warns if the selected stepper instance has a config block.
-   * @this Blockly.Block
-   */
-  onchange: function() {
-    if (!this.workspace) return;  // Block has been deleted.
-
-    var instanceName = this.getFieldValue('STEPPER_NAME')
-    if (Blockly.Instances.isInstancePresent(instanceName, 'Stepper', this)) {
-      this.setWarningText(null);
-    } else {
-      // Set a warning to select a valid stepper config block
-      this.setWarningText(
-        Blockly.Msg.ARD_COMPONENT_WARN1.replace(
-            '%1', Blockly.Msg.ARD_STEPPER_COMPONENT).replace(
-                '%2', instanceName));
-    }
-  }
 };
