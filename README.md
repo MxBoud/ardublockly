@@ -1,7 +1,10 @@
 # Forked from Ardublockly
-This version of Ardublockly is forked from [Ardublockly][18]'s project. 
+This version of Ardublockly is forked from [Ardublockly][18]'s project.
 
 ## Add on from this version
+I'm trying to customize Ardublockly for specific tasks related with robotics.
+
+I'm still learning so I apologize in advance if my contribution is hard to follow! As seen in the screenshot, I implemented a new set of blocks using some features of the [AccelStepper][19] library. From theses blocks, the user is able to configure a 4 pins stepper motor and control is acceleration and maximum speed. I also implemeted a block for the simultaneous control of two steppers. 
 
 ![Add on from this version][newBlocksScreenShot]
 
@@ -132,6 +135,7 @@ limitations under the License.
 [16]: https://github.com/BlocklyDuino/BlocklyDuino
 [17]: blockly/README.md
 [18]: https://github.com/carlosperate/ardublockly
+[19]: http://www.airspayce.com/mikem/arduino/AccelStepper/
 
 [desktop_screeshot]: http://carlosperate.github.io/ardublockly/images/screenshot_desktop_1.png
 [web_screenshot_responsive]: http://carlosperate.github.io/ardublockly/images/screenshot_material_all_small.jpg
