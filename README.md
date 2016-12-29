@@ -140,4 +140,4 @@ limitations under the License.
 [desktop_screeshot]: http://carlosperate.github.io/ardublockly/images/screenshot_desktop_1.png
 [web_screenshot_responsive]: http://carlosperate.github.io/ardublockly/images/screenshot_material_all_small.jpg
 [web_screenshot_classic]: http://carlosperate.github.io/ardublockly/images/screenshot_1.png
-[newBlocksScreenShot]: ressources/images/newBlocks.png
+[newBlocksScreenShot]: Ressources/images/NewBlocks.png
