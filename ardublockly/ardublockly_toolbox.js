@@ -231,4 +231,10 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +
 '  </category>' +
+' <category id = "catMx" name="Max\'s blocks"> '+
+'   <block type ="AccelStepper_config"></block> '+
+'   <block type ="AccelStepper_step"></block> '+
+'   <block type ="AccelStepper_synchrostep"></block> '+
+'</category>'+
+
 '</xml>';

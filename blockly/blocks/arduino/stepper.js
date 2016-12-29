@@ -46,7 +46,7 @@ Blockly.Blocks['stepper_config'] = {
             Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN1')
         .appendField(Blockly.Msg.ARD_STEPPER_PIN2)
         .appendField(new Blockly.FieldDropdown(
-            Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN3');
+            Blockly.Arduino.Boards.selected.digitalPins), 'STEPPER_PIN2');
     this.appendValueInput('STEPPER_STEPS')
         .setCheck(Blockly.Types.NUMBER.checkList)
         .setAlign(Blockly.ALIGN_RIGHT)
@@ -65,7 +65,7 @@ Blockly.Blocks['stepper_config'] = {
     Blockly.Boards.refreshBlockFieldDropdown(
         this, 'STEPPER_PIN1', 'digitalPins');
     Blockly.Boards.refreshBlockFieldDropdown(
-        this, 'STEPPER_PIN3', 'digitalPins');
+        this, 'STEPPER_PIN2', 'digitalPins');
   }
 };
 
