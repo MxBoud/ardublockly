@@ -19,8 +19,10 @@ Blocks for the sonar are using the
 The blocks have been developed and tested with some non-expensive 4 wire stepper motors. These [Kuman stepper motors][21] were bought as a kit of 5 motors and drive from Amazon for less than 20 CAD.  
 
 ### Sonar
-[Ultrasonic sensors][22] where also bought from Amazon for less dans 15 CAD.
+[Ultrasonic sensors][22] where also bought from Amazon for less than 15 CAD.
 ### 3d printed K'Nex connectors
+All the .stl file for the K'Nex and Arduino connectors are available [here][23] and on [Thingiverse][24].
+![3D print global rendering][3dPrintGlobalRendering]
 ### Location of the new code from this fork
 
 
@@ -155,9 +157,11 @@ limitations under the License.
 [20]: http://playground.arduino.cc/Code/NewPing
 [21]: http://kumantech.com/kuman-5x-stepper-motor-for-arduino-28byj-48-uln2003-5v-stepper-motor-uln2003-driver-board-k67a_p0227.html
 [22]: http://kumantech.com/kuman-5pcs-hc-sr04-ultrasonic-distance-measuring-sensor-module-kit-for-arduino-uno-mega-r3-mega2560-duemilanove-nano-raspberry-pi-brobot-k18_p0033.html
+[23]: https://github.com/MxBoud/Ardublocky/thisForkAddOn/Ressources/stl
 
 
 [desktop_screeshot]: http://carlosperate.github.io/ardublockly/images/screenshot_desktop_1.png
 [web_screenshot_responsive]: http://carlosperate.github.io/ardublockly/images/screenshot_material_all_small.jpg
 [web_screenshot_classic]: http://carlosperate.github.io/ardublockly/images/screenshot_1.png
 [newBlocksScreenShot]: /thisForkAddOn/Ressources/images/NewBlocks.png
+[3dPrintGlobalRendering]: /thisForkAddOn/Ressources/images/3dPrintGlobalRendering.png
