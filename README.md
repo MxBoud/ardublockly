@@ -22,7 +22,8 @@ The blocks have been developed and tested with some non-expensive 4 wire stepper
 [Ultrasonic sensors][22] where also bought from Amazon for less than 15 CAD.
 ### 3d printed K'Nex connectors
 All the .stl file for the K'Nex and Arduino connectors are available [here][23] and on [Thingiverse][24].
-![3D print global rendering][3dPrintGlobalRendering]
+
+![3D print global rendering][3dPrintsGlobalRendering.png]
 ### Location of the new code from this fork
 
 
@@ -164,4 +165,4 @@ limitations under the License.
 [web_screenshot_responsive]: http://carlosperate.github.io/ardublockly/images/screenshot_material_all_small.jpg
 [web_screenshot_classic]: http://carlosperate.github.io/ardublockly/images/screenshot_1.png
 [newBlocksScreenShot]: /thisForkAddOn/Ressources/images/NewBlocks.png
-[3dPrintGlobalRendering]: /thisForkAddOn/Ressources/images/3dPrintGlobalRendering.png
+[3dPrintGlobalRendering]: /thisForkAddOn/Ressources/images/3dPrintsGlobalRendering.png
