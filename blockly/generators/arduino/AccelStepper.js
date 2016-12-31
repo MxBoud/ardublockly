@@ -57,7 +57,7 @@ Blockly.Arduino['AccelStepper_config'] = function(block) {
 
 
   var setupCode1 = stepperName + '.setMaxSpeed(' + stepperSpeed + ');';
-  var setupCode2 = stepperName + '.setAcceleration(' + stepperAccel + ');';
+  var setupCode2 = '  ' + stepperName + '.setAcceleration(' + stepperAccel + ');';
   Blockly.Arduino.addSetup(stepperName, setupCode1+'\n' + setupCode2, true);
 
   return '';
@@ -90,30 +90,24 @@ Blockly.Arduino['AccelStepper_synchrostep'] = function(block) {
       Blockly.Arduino.ORDER_ATOMIC) || '0';
 
   //Declaration of the synchronous stepper function
-  var sfunc1 = 'void moveBothStepper(int step1, int step2) {\n';
-  var sfunc2 = 'int pos1 = '+ stepper1InstanceName + '.currentPosition()+step1;\n';
-  var sfunc3 = 'int pos2 = '+ stepper2InstanceName + '.currentPosition()+step2;\n';
-  var sfunc4 = stepper1InstanceName +
+  var code = 'void moveBothStepper(int step1, int step2) {\n';
+  var code += '  int pos1 = '+ stepper1InstanceName + '.currentPosition()+step1;\n';
+  var code += '  int pos2 = '+ stepper2InstanceName + '.currentPosition()+step2;\n';
+  var code += '  ' + stepper1InstanceName +
     '.moveTo(pos1); //Assign position for motor1\n';
-  var sfunc5 = stepper2InstanceName +
+  var code += '  ' + stepper2InstanceName +
     '.moveTo(pos2); //Assign position for motor2\n';
-  var sfunc6 = 'int flag1 = 0; \n int flag2 = 0; \n';
-  var sfunc7 = 'while ((flag1 == 0) || (flag2 == 0)) { \n';
-  var sfunc8 = '   if ('+stepper1InstanceName+'.currentPosition() != pos1) {\n';
-  var sfunc9 = stepper1InstanceName +'.run();}\n';
-  var sfunc10 = 'else {flag1 = 1;}\n';
-  var sfunc11 = '   if ('+stepper2InstanceName+'.currentPosition() != pos2) {\n';
-  var sfunc12 = stepper2InstanceName +'.run();}\n';
-  var sfunc13 = 'else {flag2 = 1;}\n';
-  var sfunc14 = '}\n}';
+  var code += '  int flag1 = 0; \n  int flag2 = 0; \n';
+  var code += '  while ((flag1 == 0) || (flag2 == 0)) { //Run both motors synchronously\n';
+  var code += '    if ('+stepper1InstanceName+'.currentPosition() != pos1) {\n';
+  var code += '      ' + stepper1InstanceName +'.run();}\n';
+  var code += '    else {flag1 = 1;}\n';
+  var code += '    if ('+stepper2InstanceName+'.currentPosition() != pos2) {\n';
+  var code += '      ' + stepper2InstanceName +'.run();}\n';
+  var code += '    else {flag2 = 1;}\n';
+  var code += '  }\n}';
 
-
-
-
-  Blockly.Arduino.addDeclaration("globalSynchro",sfunc1+sfunc2+
-  sfunc3+sfunc4+sfunc5+sfunc6+sfunc7+sfunc8+sfunc9+sfunc10+sfunc11+sfunc12+
-  sfunc13+sfunc14);
-
+  Blockly.Arduino.addDeclaration("globalSynchro",code); // Add the function "moveBothStepper if not existing"
 
   var code = 'moveBothStepper('+stepper1Steps+','+stepper1Steps+');\n';
   return code;

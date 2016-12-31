@@ -4,12 +4,9 @@
  */
 
 /**
- * @fileoverview Blocks for Arduino Stepper library.
- *     The Arduino Servo functions syntax can be found in the following URL:
- *     http://arduino.cc/en/Reference/Stepper
- *     Note that this block uses the Blockly.FieldInstance instead of
- *     Blockly.FieldDropdown which generates a unique instance per setup block
- *     in the workspace.
+ * @fileoverview Blocks for Arduino accelstepper library
+ *     Note that this file is strongly inspired of the
+ *     blockly/blocks/arduino/stepper.js file.
  */
 'use strict';
 
@@ -125,7 +122,7 @@ Blockly.Blocks['AccelStepper_step'] = {
 
 Blockly.Blocks['AccelStepper_synchrostep'] = {
   /**
-   * Block for for the stepper 'step()' function.
+   * Block for for the stepper 'synchrostep()' function.
    * @this Blockly.Block
    */
   init: function() {
@@ -153,21 +150,6 @@ Blockly.Blocks['AccelStepper_synchrostep'] = {
         .setCheck(Blockly.Types.NUMBER.checkList);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-
-    // this.appendDummyInput()
-    //     .appendField("move stepper2")
-    //     .appendField(
-    //         new Blockly.FieldInstance('Stepper2',
-    //                                   Blockly.Msg.ARD_STEPPER_DEFAULT_NAME,
-    //                                   false, true, false),
-    //         'STEPPER1_NAME');
-    // this.appendValueInput('STEPPER1_STEPS')
-    //     .setCheck(Blockly.Types.NUMBER.checkList);
-    // this.appendDummyInput()
-    //     .appendField(Blockly.Msg.ARD_STEPPER_STEPS);
-    // this.setPreviousStatement(true);
-    // this.setNextStatement(true);
-
 
   },
   /**
