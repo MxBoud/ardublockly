@@ -11,14 +11,17 @@ I'm still learning so I apologize in advance if my contribution is hard to follo
 
 ## Requirement
 ### Libraries
-Blocks for the stepper motor are using the AccelStepper][19] library.
+Blocks for the stepper motor are using the [AccelStepper][19] library.
 
 Blocks for the sonar are using the
- [NewPing][http://playground.arduino.cc/Code/NewPing] library.
+ [NewPing][20] library.
 ### Stepper motors
+The blocks have been developed and tested with some non-expensive 4 wire stepper motors. These [Kuman stepper motors][21] were bought as a kit of 5 motors and drive from Amazon for less than 20 CAD.  
+
 ### Sonar
+[Ultrasonic sensors][22] where also bought from Amazon for less dans 15 CAD.
 ### 3d printed K'Nex connectors
-### Location of this fork's contribution code
+### Location of the new code from this fork
 
 
 # Ardublockly
@@ -149,6 +152,10 @@ limitations under the License.
 [17]: blockly/README.md
 [18]: https://github.com/carlosperate/ardublockly
 [19]: http://www.airspayce.com/mikem/arduino/AccelStepper/
+[20]: http://playground.arduino.cc/Code/NewPing
+[21]: http://kumantech.com/kuman-5x-stepper-motor-for-arduino-28byj-48-uln2003-5v-stepper-motor-uln2003-driver-board-k67a_p0227.html
+[22]: http://kumantech.com/kuman-5pcs-hc-sr04-ultrasonic-distance-measuring-sensor-module-kit-for-arduino-uno-mega-r3-mega2560-duemilanove-nano-raspberry-pi-brobot-k18_p0033.html
+
 
 [desktop_screeshot]: http://carlosperate.github.io/ardublockly/images/screenshot_desktop_1.png
 [web_screenshot_responsive]: http://carlosperate.github.io/ardublockly/images/screenshot_material_all_small.jpg
