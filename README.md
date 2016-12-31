@@ -1,19 +1,24 @@
-# Forked from Ardublockly
+# This subproject is forked from the Ardublockly project
 This version of Ardublockly is forked from [Ardublockly][18]'s project.
 
-## Extension of this fork
+## Extensions of this fork
 I'm trying to customize Ardublockly for specific tasks related with robotics.
 
-I'm still learning so I apologize in advance if my contribution is hard to follow! As seen in the screenshot, I implemented a new set of blocks using some features of the [AccelStepper][19] library. From theses blocks, the user is able to configure a 4 pins stepper motor and control its acceleration and maximum speed. I also implemeted a block for the simultaneous control of two steppers.
+I'm still learning so I apologize in advance if my contribution is hard to follow! As seen in the screenshot, I implemented a new set of blocks using some features of the [AccelStepper][19] library. From theses blocks, the user is able to configure a 4 pins stepper motor and control its acceleration and maximum speed. I also added a block for the simultaneous control of two steppers.
 
 
 ![Add on from this version][newBlocksScreenShot]
 
 ## Requirement
 ### Libraries
+Blocks for the stepper motor are using the AccelStepper][19] library.
+
+Blocks for the sonar are using the
+ [NewPing][http://playground.arduino.cc/Code/NewPing] library.
 ### Stepper motors
 ### Sonar
 ### 3d printed K'Nex connectors
+### Location of this fork's contribution code
 
 
 # Ardublockly
@@ -148,4 +153,4 @@ limitations under the License.
 [desktop_screeshot]: http://carlosperate.github.io/ardublockly/images/screenshot_desktop_1.png
 [web_screenshot_responsive]: http://carlosperate.github.io/ardublockly/images/screenshot_material_all_small.jpg
 [web_screenshot_classic]: http://carlosperate.github.io/ardublockly/images/screenshot_1.png
-[newBlocksScreenShot]: Ressources/images/NewBlocks.png
+[newBlocksScreenShot]: /thisForkAddOn/Ressources/images/NewBlocks.png
