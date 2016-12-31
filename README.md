@@ -158,7 +158,7 @@ limitations under the License.
 [20]: http://playground.arduino.cc/Code/NewPing
 [21]: http://kumantech.com/kuman-5x-stepper-motor-for-arduino-28byj-48-uln2003-5v-stepper-motor-uln2003-driver-board-k67a_p0227.html
 [22]: http://kumantech.com/kuman-5pcs-hc-sr04-ultrasonic-distance-measuring-sensor-module-kit-for-arduino-uno-mega-r3-mega2560-duemilanove-nano-raspberry-pi-brobot-k18_p0033.html
-[23]: https://github.com/MxBoud/Ardublocky/thisForkAddOn/Ressources/stl
+[23]: https://github.com/MxBoud/Ardublocky/thisForkAddOn/Ressources/stl/
 
 
 [desktop_screeshot]: http://carlosperate.github.io/ardublockly/images/screenshot_desktop_1.png
