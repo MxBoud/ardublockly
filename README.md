@@ -1,5 +1,5 @@
 # This subproject is forked from the Ardublockly project
-This version of Ardublockly is forked from [Ardublockly][18]'s project.
+This version of Ardublockly is forked from the [Ardublockly][18]'s project.
 
 ## Extensions of this fork
 I'm trying to customize Ardublockly for specific tasks related with robotics.
@@ -160,6 +160,8 @@ limitations under the License.
 [22]: http://kumantech.com/kuman-5pcs-hc-sr04-ultrasonic-distance-measuring-sensor-module-kit-for-arduino-uno-mega-r3-mega2560-duemilanove-nano-raspberry-pi-brobot-k18_p0033.html
 [23]: https://github.com/MxBoud/ardublockly/tree/master/thisForkAddOn/Ressources/stl
 [24]: http://www.thingiverse.com/thing:2007475
+[23]: https://github.com/MxBoud/ardublocklyForKNexRobot/tree/master/thisForkAddOn/Ressources/stl
+
 
 
 [desktop_screeshot]: http://carlosperate.github.io/ardublockly/images/screenshot_desktop_1.png
